@@ -1,0 +1,94 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "../../../theme-color.scss";
+@import "../../../style.scss";
+
+.loginRegisterheader{
+    @include fullDiv;
+    text-align: right;
+}
+.loginBtn{
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: $theme-color;
+    background-color: $white-color;
+    margin:1px 8px;
+    @include Font14;
+    text-transform: uppercase;
+    // border-right: 1px solid $theme-color;
+    .nav-link{
+        color: $theme-color;
+        padding: 0px
+    }
+
+}
+.cartBtn{
+    @extend .loginBtn;
+    position: relative;
+    @include Font24;
+    border: none;
+    span{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $theme-color;
+        color: $white-color;
+        top: -0px;
+        right: -10px;
+        position: absolute;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.webMenu{
+    @include fullDiv;
+    padding: 0px;
+    margin: 0px;
+    li{
+        list-style: none;
+        display: inline-block;
+        .nav-link{
+            padding-top: 0px;
+            padding-bottom: 15px;
+            color: $theme-color;
+            // &.active{
+            //     color: $black-color;
+            // }
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+}
+.headerMedia{
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+    li{
+        list-style: none;
+        display: inline-block;
+        margin: 0px 5px;
+        color: $theme-color;
+        @include Font18;
+        
+    }
+}
+.logoGps{
+    width: 50%;
+    height: auto;
+    margin: 12px 0px 0px 0px;
+}
+
+.headerTop{
+    @include fullDiv;
+    background-color: $white-color;
+    .fixed-top{
+        background-color: $white-color;
+        padding: 0px 30px;
+    }
+    .headerFixback{
+        @include fullDiv;
+        height: 77px;
+    }
+}

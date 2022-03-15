@@ -1,0 +1,30 @@
+$white-color: #fff;
+$black-color: #000;
+$gray-color: gray;
+$gray-light-color: #dcdcdc;
+$theme-color:#ff7165;
+$orange-color:#FC8379;
+$orange-dark-color:#c36e66;
+$whit-dark-color:#E8EEFE;
+
+
+$btn-height: 40px;
+$input-height: 40px;
+
+@mixin linearGradient {
+    background-image: linear-gradient(to right, #161616 , #867661, #EECFA7);
+}
+@mixin fontFamilyRoboto {
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+  @mixin tatileFont{
+    font-size: 48px;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    @include fontFamilyRoboto;
+}

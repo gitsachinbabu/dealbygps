@@ -1,0 +1,81 @@
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "../../../theme-color.scss";
+@import "../../../style.scss";
+
+
+.sectionProfile{
+    @include fullDiv;
+}
+
+.profileBg{
+    @include fullDiv;
+    //  background-color: $whit-dark-color;
+    // background-image: url('../../../images/banner-img.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size:cover;
+    border: 1px solid $theme-color;
+     @include borderRadiusAll;
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0px;
+    // color: $whit-dark-color;
+    &::before{
+        background-color: $theme-color;
+        @include borderRadiusAll;
+        height:1000px;
+        width: 1000px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: -70%;
+        // right: 0px;
+        // z-index: -1;
+        transform: rotate(45deg);
+    }
+    .btnBig{
+        background-color: $white-color;
+        color: $theme-color;
+        position: relative;
+    }
+}
+.profileImage{
+    width: 150px;
+    height: 150px;
+    @include borderRadiusAll;
+    margin:50px 0px 0px 0px;
+    border: 1px solid $theme-color;
+    object-fit: cover;
+    position: relative;
+}
+.profilemenu{
+    
+    padding: 0px;
+    margin: 0px;
+    @include fullDiv;
+    li{
+        @include fullDiv;
+        list-style: none;
+        .nav-link{
+            background-color: $whit-dark-color;
+            margin: 0px 0px 20px 0px;
+            border-radius: 0px 20px 20px 0px;
+            padding: 10px 0px;
+            color: $theme-color;
+            svg{
+                width: 30px;
+                margin: 0px 10px;
+                @include Font18;
+            }
+        }
+    }
+}
+.profileMenubox{
+    @include fullDiv;
+    // background-color: $theme-color;
+    // display: flex;
+    height: 100%;
+    @include borderRadiusAll;
+    padding: 0px 15px;
+}

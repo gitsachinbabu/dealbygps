@@ -1,0 +1,20 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "../../../theme-color.scss";
+@import "../../../style.scss";
+
+.sectionFooter{
+    @include fullDiv;
+    @include borderRadiusAll;
+    background-color: $theme-color;
+    color: $white-color;
+    padding: 30px 5%;
+}
+.footerLink{
+    padding: 0px;
+    margin: 0px;
+    li{
+        width: 100%;
+        list-style: none;
+        margin-bottom: 10px;
+    }
+}

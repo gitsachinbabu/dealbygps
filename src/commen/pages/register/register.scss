@@ -1,0 +1,90 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "../../../theme-color.scss";
+@import "../../../style.scss";
+@import "../../pages/login/login.scss";
+
+
+.sectionLogin{
+    &.register{
+        .screen{
+            width: 900px;
+            height: auto;
+        }
+        .screen__background{
+            .screen__background__shape1 {
+                height: 1200px;
+                width: 300%;
+                top: -100%;
+                right: -100px;
+            }
+        }
+        .logoGps{
+            width: 150px
+        }
+
+        
+    }
+} 
+
+.registerForm{
+    @include fullDiv();
+    padding: 30px;
+}
+.login__field {
+    &.gender{
+        display: flex;
+        border-bottom: 2px solid $gray-light-color;
+        padding: 20px 0px 5px 0px;
+        justify-content: space-between;
+        font-weight: 700;
+        color: $gray-color;
+        @include Font14;
+        p{
+            margin-bottom: 0px;
+        }
+        
+    }
+    &:hover{
+        border-color: $theme-color;
+    }
+    
+}
+.processing{
+    display: flex;
+    @include Font14;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    span{
+        margin-right: 10px;
+    }
+}
+.signWithGoogle{
+    @include fullDiv;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+    img{
+        width: 40px;
+        border-radius: 4px;
+        margin: 10px;
+    }
+}
+.termsCondition{
+    @include fullDiv;
+    text-align: center;
+    @include Font14;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .sectionLogin.register{
+        .screen__background {
+        .screen__background__shape1 {
+            height: 1200px;
+            width: 300%;
+            top: -315px;
+        }
+    }
+    }
+}

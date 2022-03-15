@@ -1,0 +1,750 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./theme-color.scss";
+
+@mixin fontFamilyRoboto {
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+@mixin tatileFont{
+    font-size: 24px;
+    color: $theme-color;
+    @include fontFamilyRoboto();
+    font-weight: 700;
+}
+
+@mixin borderRadiusCircle{
+    border-radius: 50%;
+}
+@mixin borderLightGray{
+    border: 1px solid $light-gray-color;
+}
+@mixin displayFlexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin borderRadiusAll {
+    border-radius: 15px;
+}
+@mixin cardpaddingMargin {
+    padding: 0px 5px;
+    margin: 15px 0px;
+}
+@mixin fullDiv {
+    width: 100%;
+    float: left;
+}
+@mixin BorderOrange {
+    border: 1px solid $theme-color;
+}
+@mixin BorderGray {
+    border: 1px solid $gray-color;
+}
+@mixin CommonButton {
+    @include linearGradient();
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px;
+    color: $white-color;
+}
+@mixin Font24 {
+    font-size: 24px;
+}
+@mixin Font20 {
+    font-size: 20px;
+}
+@mixin Font18 {
+    font-size: 18px;
+}
+@mixin Font16 {
+    font-size: 16px;
+}
+@mixin Font14 {
+    font-size: 14px;
+}
+@mixin BorderNone {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
+
+// @mixin borderTopDeshedGray {
+//     border-top: 1px dashed $light-gray-color;
+// }
+// @mixin borderTopBottomDeshedGray {
+//     border-top: 1px dashed $light-gray-color;
+//     border-bottom: 1px dashed $light-gray-color;
+// }
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    // @include fontFamilyChewy;
+}
+
+.btnBig{
+    background-color: $theme-color;
+    color: $white-color;
+    width: 300px;
+    height: 60px;
+    @include borderRadiusAll;
+    @include Font18();
+    @include BorderNone;
+    font-weight: 600;
+    border: none !important;
+    margin: 30px auto;
+}
+.WwiteBtnBg{
+    background-color: $white-color;
+    color: $theme-color;
+    width: 200px;
+    height: 40px;
+    @include borderRadiusAll;
+    @include Font16();
+    @include BorderNone;
+    font-weight: 400;
+    border: none !important;
+    margin: 0px auto;
+    text-transform: uppercase;
+}
+.wrapper{
+    @include fullDiv();
+    padding: 0px 30px;
+}
+.allHeading{
+    color: $theme-color;
+    @include Font24();
+    text-transform: uppercase;
+}
+.allHeadingInner{
+    color: $black-color;
+    @include Font18();
+}
+.sectionHeader{
+    @include fullDiv();
+}
+.SectionBanner{
+    @include fullDiv();
+    background-color: $black-color;
+    background-image: url('../src/images/banner-img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 490px;
+    @include borderRadiusAll;
+    padding-top: 80px;
+}
+.borderBox{
+    @include fullDiv();
+    @include borderRadiusAll;
+    border: 1px solid $gray-light-color;
+}
+.inputSearchBanner{
+    @include fullDiv();
+    text-align: center;
+    h1{
+        font-size: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white-color;
+    }
+}
+.inputSearchBox{
+    @include fullDiv();
+    display: flex;
+    @include borderRadiusAll;
+    @include BorderOrange();
+    display: flex;
+    justify-content: space-between;
+    background-color: $white-color;
+    margin-top: 20px;
+    position: relative;
+    &::before{
+       position: absolute;
+       content: '';
+       width: 1px;
+       height: 35px;
+       right: 33%;
+       top: 10px;
+       border-left: 1px solid $theme-color;
+   }
+    .searchInput{
+        @include BorderNone;
+        padding: 0px 15px;
+        height: 55px;
+        @include borderRadiusAll;
+        width: 70%;
+        background-color: transparent;
+    }
+    .inputNear{
+        @extend .searchInput;
+        width: 30%;
+    }
+    .searchIcon{
+        border-radius: 13px;
+        background-color: $theme-color;
+        height: 55px;
+        width: 60px;
+        @include displayFlexCenter;
+        color: $white-color;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+.sectionExtraDiscount{
+    @include fullDiv();
+    .ExtraDiscountBox{
+        @include fullDiv();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        @include borderRadiusAll;
+        color: $white-color;
+        background-color: $theme-color;
+        height: 180px;
+        margin-top: 30px;
+        .ExtraDiscountHeading{
+            width: 30%;
+            text-align: center;
+            h2{
+                font-size: 72px;
+                font-weight: 700;
+            }
+        }
+        .ExtraDiscounBgimg{
+            @include borderRadiusAll;
+            width: 70%;
+            background-color: $black-color;
+            padding: 20px;
+            height: 164px;
+            padding-top: 3%;
+            h5{
+                @include Font24;
+            }
+        }
+    }
+}
+
+.ShopCatogery{
+    @extend .borderBox;
+    margin-bottom: 30px;
+    img{
+        height: 350px;
+        @extend .borderBox;
+        object-fit: cover;
+    }
+    .ShopCatogeryDetail{
+        padding: 15px;
+        @include fullDiv();
+        p{
+            color: $black-color;
+        }
+    }
+}
+.allItemBox{
+    @extend .borderBox;
+    margin-bottom: 30px;
+    .itemImg{
+        @include fullDiv();
+        position: relative;
+        margin-bottom: 10px;
+        .heartIcon{
+            position: absolute;
+            right: 15px;
+            bottom: -20px;
+            height: 40px;
+            width: 40px;
+            @include displayFlexCenter;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px $gray-color;
+            background-color: $white-color;
+            @include Font20();
+            svg{
+                fill: $theme-color;
+            }
+           
+        }
+        img{
+            height: 280px;
+            @extend .borderBox;
+            object-fit: cover;
+        }
+    }
+    
+    .allItemDetails{
+        padding: 15px;
+        @include fullDiv();
+        position: relative;
+        h4{
+            color: $theme-color;
+            @include Font24();
+        }
+        h5{
+            color: $theme-color;
+            @include Font16();
+            font-weight: 600;
+        }
+        p{
+            color: $black-color;
+        }
+        .shortRate{
+            @include fullDiv();
+            display: flex;
+            @include Font16();
+                p{
+                    color: $gray-color;
+                    margin-bottom: 0px;
+                }
+            strong{
+                margin-right: 3px;
+                color: $black-color
+            }
+        }
+        .rating{
+            @include displayFlexCenter;
+            position: absolute;
+            width: 80px;
+            right: 0px;
+            bottom: 15px;
+            color: $theme-color;
+            font-weight: 700;
+            svg{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.localShopping{
+   @extend .borderBox;
+    margin-bottom: 30px;
+    @include displayFlexCenter();
+    .localShoppingItemImg{
+        width: 160px;
+        height: 150px;
+        @include borderRadiusAll();
+        border: 1px solid $gray-light-color;
+        margin-right: 15px;
+        img{
+            @extend .borderBox;
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+    .localShoppingDetails{
+        width: 75%;
+        padding-right: 5px;
+        p{
+            margin: 0px;
+            color: $black-color;
+            &:nth-child(2){
+                color: $gray-color;
+                font-weight: 500;
+            }
+        }
+        
+        button{
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            color: $theme-color;
+            background-color: transparent !important;
+            margin-top: 5px;
+        }
+    }
+}
+.obituariesBox{
+    @extend .borderBox;
+    margin-bottom: 30px;
+    .obituariesBoxImg{
+        @extend .borderBox;
+        img{
+            @extend .borderBox;
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+    .obituariesDetails{
+        @include fullDiv();
+        padding: 15px;
+        p{
+            margin-bottom: 5px;
+            color: $black-color;
+            font-weight: 600;
+           &:nth-child(1){
+               color: $theme-color;
+               @include Font14();
+               text-transform: uppercase;
+           }
+           &:nth-child(2){
+            color: $black-color;
+            text-transform: uppercase;
+            }
+            &:nth-child(3){
+                color: $gray-color;
+            }
+        }
+    }
+}
+
+.bestBusinessBox{
+    @extend .borderBox;
+    margin-bottom: 30px;
+    position: relative;
+    img{
+        @extend .borderBox;
+        height: 280px;
+        object-fit: cover;
+    }
+    h5{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: $white-color;
+        @include Font24();
+    }
+}
+.YourHealthBox{
+    @include fullDiv();
+    img{
+        @extend .borderBox;
+        margin-bottom: 30px;
+        object-fit: cover;
+        height: 420px;
+    }
+    .FourImg{
+        @extend .borderBox;
+        margin-bottom: 30px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+.downloadBoxBg{
+    @extend .borderBox;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: $theme-color;
+}
+.ourAppBox{
+    @include fullDiv();
+    @include borderRadiusAll();
+    color: $white-color;
+    text-align: center;
+    padding: 15px;
+    min-height: 185px;
+    display: grid;
+    align-items: center;
+    &.bg1{
+        background-color: $orange-color;
+    }
+    &.bg2{
+        background-color: $orange-dark-color;
+        height: 205px;
+    }
+    h4{
+        @include Font24();
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0px;
+    }
+    p{
+        margin: 0px;
+    }
+   
+}
+
+.viedoBox{
+   @include fullDiv();
+    margin-bottom: 30px;
+    position: relative;
+    img{
+        height: 290px;
+        width: 100%;
+        @extend .borderBox;
+        object-fit: cover;
+    }
+    svg{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        fill: $white-color;
+        font-size: 50px;
+        cursor: pointer;
+    }
+}
+.listBusinessDirectory{
+    margin: 0px 0px;
+    padding: 0px;
+    @include fullDiv();
+    li{
+        @include fullDiv();
+        position: relative;
+        padding: 0px 0px 0px 20px;
+        list-style: none;
+        text-align: left;
+        margin-bottom: 15px;
+        &::after{
+            content: '';
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 0px;
+            top: 5px;
+            background-image: url('./images/arrow-right.png');
+            background-repeat: no-repeat;
+            background-size: 10px;
+        }
+    }
+    
+}
+.googleAddBox{
+    @extend .borderBox;
+    position: relative;
+    overflow: hidden;
+    .addCloseBtn{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+.addCloseBtn{
+    border: none;
+    box-shadow: none;
+    outline: none;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: $white-color;
+    color: $theme-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.mediaIconList{
+    @include fullDiv();
+    margin: 30px 0px;
+    padding: 0px;
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        list-style: none;
+        text-align: left;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 12px;
+        color: $white-color;
+        @include Font24();
+        float: left;
+        z-index: 1;
+        cursor: pointer;
+        &::before{
+            width: 70px;
+            height: 70px;
+            background-color:transparent;
+            border-radius: 50%;
+            border: 1px solid $theme-color;
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+        }
+        &:nth-child(1){
+            background-color: #3A5898;
+            &::before{
+                border-color:#3A5898 ;
+            }
+        }
+        &:nth-child(2){
+            background-color: #3F98FE;
+            &::before{
+                border-color:#3F98FE ;
+            }
+        }
+        &:nth-child(3){
+            background-color: #115586;
+            &::before{
+                border-color:#115586 ;
+            }
+        }
+        &:nth-child(4){
+            background-color: #4775B3;
+            &::before{
+                border-color:#4775B3 ;
+            }
+        }
+        &:nth-child(5){
+            background-color: #DC4B38;
+            &::before{
+                border-color:#DC4B38 ;
+            }
+        }
+        &:nth-child(6){
+            background-color: #B40004;
+            &::before{
+                border-color:#B40004 ;
+            }
+        }
+        
+    }
+}
+.slderCarouselDeal{
+    .carousel-control-prev{
+        bottom: inherit;
+        top: 10px;
+        background-color: $theme-color;
+        opacity: 1;
+        border-radius: 30px 0px 0px 30px;
+        right: 50px;
+        left: inherit;
+        width: 40px;
+        .carousel-control-prev-icon{
+            background-size: 60%;
+        }
+    }
+    .carousel-control-next{
+        bottom: inherit;
+        top: 10px;
+        background-color: $theme-color;
+        opacity: 1;
+        border-radius: 0px 30px 30px 0px;
+        right: 10px;
+        width: 40px;
+        .carousel-control-next-icon{
+            background-size: 60%;
+        }
+    }
+}
+.selectFuturebusiness{
+    margin-bottom: 30px;
+    border: 1px solid $theme-color;
+    color: $theme-color;
+    height: 60px;
+    @include borderRadiusAll();
+}
+
+.scrollMenu{
+    @include fullDiv();
+    overflow-x: scroll;
+    margin-bottom: 30px;
+    &::-webkit-scrollbar {
+        width: 2px;
+        height: 4px;
+        margin-left: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px #eaeaea;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+    background: $theme-color;
+    border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: $theme-color;
+      }
+    ul{
+        @include fullDiv();
+        display: flex;
+        padding: 0px;
+        margin: 0px 0px 20px 0px;
+        li{
+            display: inline-block;
+            button{
+                border: 1px solid $theme-color;
+                color: $theme-color;
+                padding: 8px;
+                background-color: $white-color;
+                margin: 0px 10px;
+                @include borderRadiusAll();
+                width: 150px;
+            }
+        }
+    }
+}
+
+  
+
+
+
+
+@media only screen and (max-width: 1700px) {
+    .inputSearchBanner {
+        h1 {
+        font-size: 50px;
+        
+    }
+  }
+  .SectionBanner {
+      height: 380px;
+  }
+  .inputSearchBox{
+      &::before{
+        height: 22px;
+        right: 34%;
+      }
+    .searchIcon {
+        height: 40px;
+    }
+    .inputNear{
+        height: 40px;
+    }
+    .searchInput{
+        height: 40px;
+    }
+  }
+
+
+.bestBusinessBox{
+    img {
+        height: 200px;
+    }
+}
+.allItemBox {
+    .itemImg {
+        img {
+        height: 200px;
+    }
+}
+}
+.viedoBox {
+    img {
+    height: 220px;
+}
+}
+
+.sectionExtraDiscount{
+    .ExtraDiscountBox {
+        height: 140px;
+        .ExtraDiscountHeading{
+            h2{
+                font-size: 46px;
+            }
+        }
+        .ExtraDiscounBgimg{
+            height: 120px;
+        }
+    }
+    
+} 
+.ShopCatogery{
+    img {
+        height: 250px;
+    }
+} 
+
+
+
+}
